@@ -25,3 +25,18 @@ Bebida:Suco de Laranja;10.0;5;500;false
 Restaurante:Pizzaria da ingrid;cidade nova, 123
 Comida:Pizza Margherita;40.0;30;Italiana;true
 Bebida:Suco de Laranja;10.0;5;500;false
+Restaurante:Pizzaria da ingrid;cidade nova, 123
+Comida:Pizza Margherita;40.0;30;Italiana;true
+Bebida:Suco de Laranja;10.0;5;500;false
+Restaurante:Pizzaria da ingrid;cidade nova, 123
+Comida:Pizza Margherita;40.0;30;Italiana;true
+Bebida:Suco de Laranja;10.0;5;500;false
+Restaurante:Pizzaria da ingrid;cidade nova, 123
+Comida:Pizza Margherita;40.0;30;Italiana;true
+Bebida:Suco de Laranja;10.0;5;500;false
+Restaurante:Pizzaria da ingrid;cidade nova, 123
+Comida:Pizza Margherita;40.0;30;Italiana;true
+Bebida:Suco de Laranja;10.0;5;500;false
+Restaurante:Pizzaria da ingrid;cidade nova, 123
+Comida:Pizza Margherita;40.0;30;Italiana;true
+Bebida:Suco de Laranja;10.0;5;500;false
