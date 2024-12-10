@@ -13,20 +13,15 @@ import java.util.List;
 
 public class Bebida extends Produto {
     private int tamanhoML;
-    private boolean alcoolica;
 
-    public Bebida(String nome, double preco, int tempoPreparo, int tamanhoML, boolean alcoolica) {
-        super(nome, preco, tempoPreparo);
+    public Bebida(int codProduto, String nome, double preco, boolean alcoolica, String descricao, int tempoPreparo, int tamanhoML, boolean vegetariano, String categoria) {
+        super(codProduto, nome, preco, alcoolica, descricao, tamanhoML, vegetariano, categoria);
         this.tamanhoML = tamanhoML;
-        this.alcoolica = alcoolica;
     }
 
     public int getTamanhoML() {
         return tamanhoML;
     }
 
-    public boolean isAlcoolica() {
-        return alcoolica;
-    }
 }
 
