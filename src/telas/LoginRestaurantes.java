@@ -332,7 +332,21 @@ public class LoginRestaurantes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginRestauranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginRestauranteActionPerformed
+        String nome = NomeDono.getText().trim();
+        String email = EmailRestaurante.getText();
+
+        
+        // Checar se os campos estão vazios
+        if (Checagem.Vazio(nome,email)) {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;}
+            else if (Categoria.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione uma categoria.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+            else{
         new Restaurante().setVisible(true);
+            }
     }//GEN-LAST:event_loginRestauranteActionPerformed
 
     private void EmailRestauranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailRestauranteActionPerformed
