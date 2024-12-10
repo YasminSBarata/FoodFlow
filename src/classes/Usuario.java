@@ -4,12 +4,7 @@
  */
 package classes;
 
-/**
- *
- * @author yasmi
- */
-import java.util.ArrayList;
-import java.util.List;
+
 
 // Classe Usuario (base para Cliente e Dono do Restaurante)
 public abstract class Usuario {

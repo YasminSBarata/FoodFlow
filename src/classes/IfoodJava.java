@@ -11,6 +11,7 @@ package classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import telas.Inicial;
 
 public class IfoodJava {
     public static void main(String[] args) {
@@ -42,6 +43,6 @@ public class IfoodJava {
 
         // Finalizando o pedido
         cliente.finalizarPedido();
-
+new Inicial().setVisible(true);
         }
     }
