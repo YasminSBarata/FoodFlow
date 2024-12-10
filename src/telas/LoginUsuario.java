@@ -4,6 +4,12 @@
  */
 package telas;
 
+import classes.Cliente;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import classes.Checagem;
 /**
  *
  * @author mateu
@@ -28,21 +34,20 @@ public class LoginUsuario extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        SenhaC = new java.awt.Label();
+        EmailUsuario = new java.awt.Label();
         UsuarioCliente = new java.awt.TextField();
-        SenhaCliente = new javax.swing.JPasswordField();
         UsuarioC = new java.awt.Label();
         LoginCliente = new javax.swing.JButton();
+        emailUsuario = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(400, 720));
 
         jPanel1.setBackground(new java.awt.Color(255, 51, 51));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 720));
 
-        SenhaC.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        SenhaC.setForeground(new java.awt.Color(0, 0, 0));
-        SenhaC.setText("Senha");
+        EmailUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EmailUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        EmailUsuario.setText("Email");
 
         UsuarioCliente.setBackground(new java.awt.Color(204, 204, 204));
         UsuarioCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -51,23 +56,22 @@ public class LoginUsuario extends javax.swing.JFrame {
             }
         });
 
-        SenhaCliente.setBackground(new java.awt.Color(204, 204, 204));
-        SenhaCliente.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        SenhaCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SenhaClienteActionPerformed(evt);
-            }
-        });
-
         UsuarioC.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         UsuarioC.setText("Usuario");
 
         LoginCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        LoginCliente.setText("Login");
+        LoginCliente.setText("Login/Cadastrar");
         LoginCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         LoginCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginClienteActionPerformed(evt);
+            }
+        });
+
+        emailUsuario.setBackground(new java.awt.Color(204, 204, 204));
+        emailUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailUsuarioActionPerformed(evt);
             }
         });
 
@@ -78,14 +82,13 @@ public class LoginUsuario extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(SenhaC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EmailUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(UsuarioC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(LoginCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(UsuarioCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(SenhaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(UsuarioCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                    .addComponent(emailUsuario))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -97,9 +100,9 @@ public class LoginUsuario extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(UsuarioC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(UsuarioCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addComponent(SenhaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(SenhaC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addComponent(emailUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(EmailUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(LoginCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45))
@@ -136,13 +139,33 @@ public class LoginUsuario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_UsuarioClienteActionPerformed
 
-    private void SenhaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhaClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SenhaClienteActionPerformed
-
     private void LoginClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginClienteActionPerformed
+                                               
+        
+        String nome = UsuarioCliente.getText().trim();
+        String email = emailUsuario.getText();
 
+        
+        // Checar se os campos estão vazios
+        if (Checagem.Vazio(nome,email)) {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        
+        Cliente cliente = new Cliente(0, nome, email);
+        try {
+            cliente.init();
+            JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso.", "Sucesso!", JOptionPane.PLAIN_MESSAGE);
+            this.setVisible(false);
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Algo deu errado! O cliente não foi cadastrado.", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_LoginClienteActionPerformed
+
+    private void emailUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,11 +203,11 @@ public class LoginUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Label EmailUsuario;
     private javax.swing.JButton LoginCliente;
-    private java.awt.Label SenhaC;
-    private javax.swing.JPasswordField SenhaCliente;
     private java.awt.Label UsuarioC;
     private java.awt.TextField UsuarioCliente;
+    private javax.swing.JTextField emailUsuario;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

@@ -13,19 +13,14 @@ import java.util.List;
 
 public class Comida extends Produto {
     private String tipoCozinha;
-    private boolean vegetariano;
 
-    public Comida(String nome, double preco, int tempoPreparo, String tipoCozinha, boolean vegetariano) {
-        super(nome, preco, tempoPreparo);
+    public Comida(int codProduto, String nome, double preco, boolean alcoolica, String descricao, String tipoCozinha, int tempoPreparo, boolean vegetariano) {
+        super(codProduto, nome, preco, alcoolica, descricao, tempoPreparo, vegetariano);
         this.tipoCozinha = tipoCozinha;
-        this.vegetariano = vegetariano;
     }
 
     public String getTipoCozinha() {
         return tipoCozinha;
     }
 
-    public boolean isVegetariano() {
-        return vegetariano;
-    }
 }
