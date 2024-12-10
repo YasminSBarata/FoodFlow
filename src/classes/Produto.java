@@ -15,6 +15,8 @@ public abstract class Produto {
     protected String nome;
     protected double preco;
     protected int tempoPreparo;
+    
+public static String[] categorias = { "Comida", "Bebida" };
 
     public Produto(String nome, double preco, int tempoPreparo) {
         this.nome = nome;
