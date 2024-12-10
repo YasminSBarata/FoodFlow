@@ -18,6 +18,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.DefaultComboBoxModel;
 
 public class Manipulador {
     
@@ -147,7 +148,8 @@ public class Manipulador {
             String descricao = partes[4];
             int tempo = Integer.parseInt(partes[5]);
             boolean vegetariano = Boolean.parseBoolean(partes[6]);
-        return new Produto(codProduto, nome, preco, alcoolica, descricao, tempo, vegetariano) {};
+            String categoria = partes[7];
+        return new Produto(codProduto, nome, preco, alcoolica, descricao, tempo, vegetariano, categoria) {};
     }
     
     // armazena um produto no banco de dados
@@ -210,4 +212,16 @@ public class Manipulador {
                 armazenar(currProduto);
         }
     }
+    class MyComboBoxModel extends DefaultComboBoxModel<String> {
+    public MyComboBoxModel(String[] items) {
+        super(items);
+    }
+ 
+    @Override
+    public String getSelectedItem() {
+        String selectedString = (String) super.getSelectedItem();
+ 
+        return selectedString;
+    }
+}
 }

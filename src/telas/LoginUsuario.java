@@ -156,10 +156,11 @@ public class LoginUsuario extends javax.swing.JFrame {
         Cliente cliente = new Cliente(0, nome, email);
         try {
             cliente.init();
-            JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso.", "Sucesso!", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, null, "Sucesso!", JOptionPane.PLAIN_MESSAGE);
             this.setVisible(false);
+            new RestaurantesDisponiveis().setVisible(true);
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Algo deu errado! O cliente não foi cadastrado.", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Algo deu errado!", null, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_LoginClienteActionPerformed
 

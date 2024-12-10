@@ -70,7 +70,8 @@ public class DonoRestaurante extends Usuario {
                     int tempoPreparo = Integer.parseInt(partes[6]);
                     String tipoCozinha = partes[7];
                     boolean vegetariano = Boolean.parseBoolean(partes[8]);
-                    restauranteAtual.adicionarProduto(new Comida(codProduto, nome, preco, alcoolica, descricao, tipoCozinha, tempoPreparo, vegetariano));
+                    String categoria = partes[9];
+                    restauranteAtual.adicionarProduto(new Comida(codProduto, nome, preco, alcoolica, descricao, tipoCozinha, tempoPreparo, vegetariano, categoria));
                 } else if (linha.startsWith("Bebida:") && restauranteAtual != null) {
                     int codProduto = Integer.parseInt(partes[1]);
                     String nome = partes[2];
@@ -80,7 +81,8 @@ public class DonoRestaurante extends Usuario {
                     int tempoPreparo = Integer.parseInt(partes[6]);
                     int tamanhoML = Integer.parseInt(partes[7]);
                     boolean vegetariano = Boolean.parseBoolean(partes[8]);
-                    restauranteAtual.adicionarProduto(new Bebida(codProduto, nome, preco, alcoolica, descricao, tempoPreparo, tamanhoML, vegetariano));
+                    String categoria = partes[9];
+                    restauranteAtual.adicionarProduto(new Bebida(codProduto, nome, preco, alcoolica, descricao, tempoPreparo, tamanhoML, vegetariano, categoria));
                 }
             }
         } catch (Exception e) {

@@ -293,10 +293,10 @@ if (Checagem.Vazio(NomeProduto.getText().trim(),
         String nome = NomeProduto.getText().trim();
         double preco = Double.parseDouble(PrecoProduto.getText().replace(',', '.'));
         boolean alcoolica = Alcool.isSelected();
-        String categoria = Categoria.getSelectedItem().toString();
         String descricao = DescricaoProduto.getText();
         int tempoPreparo = Integer.parseInt(PrecoProduto.getText());
         boolean vegetariano = Vegetariano.isSelected();
+        String categoria = Categoria.getSelectedItem().toString();
 
         // Checa se foi selecionada uma categoria
         if (Categoria.getSelectedIndex() == 0) {
@@ -304,7 +304,7 @@ if (Checagem.Vazio(NomeProduto.getText().trim(),
             return;
         }
 
-        Produto produto = new Produto(0, nome, preco, alcoolica, descricao, tempoPreparo, vegetariano) {};
+        Produto produto = new Produto(0, nome, preco, alcoolica, descricao, tempoPreparo, vegetariano, categoria) {};
         try {
             produto.init();
             Cadastrou.showMessageDialog(null, "Produto cadastrado com sucesso.", "Sucesso!", Cadastrou.PLAIN_MESSAGE);

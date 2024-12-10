@@ -14,8 +14,8 @@ import java.util.List;
 public class Comida extends Produto {
     private String tipoCozinha;
 
-    public Comida(int codProduto, String nome, double preco, boolean alcoolica, String descricao, String tipoCozinha, int tempoPreparo, boolean vegetariano) {
-        super(codProduto, nome, preco, alcoolica, descricao, tempoPreparo, vegetariano);
+    public Comida(int codProduto, String nome, double preco, boolean alcoolica, String descricao, String tipoCozinha, int tempoPreparo, boolean vegetariano, String categoria) {
+        super(codProduto, nome, preco, alcoolica, descricao, tempoPreparo, vegetariano, categoria);
         this.tipoCozinha = tipoCozinha;
     }
 

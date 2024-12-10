@@ -17,10 +17,11 @@ public abstract class Produto {
     private String descricao;
     protected int tempoPreparo;
     boolean vegetariano;
+    String categoria;
     
 public static String[] categorias = { "Comida", "Bebida" };
 
-public Produto(int codProduto, String nome, double preco, boolean alcoolica, String descricao, int tempoPreparo, boolean vegetariano) {
+public Produto(int codProduto, String nome, double preco, boolean alcoolica, String descricao, int tempoPreparo, boolean vegetariano, String categoria) {
         this.codProduto = codProduto;
         this.nome = nome;
         this.preco = preco;
@@ -28,6 +29,7 @@ public Produto(int codProduto, String nome, double preco, boolean alcoolica, Str
         this.descricao = descricao;
         this.tempoPreparo = tempoPreparo;
         this.vegetariano = vegetariano;
+        this.categoria = categoria;
     }
 
     public String getNome() {
@@ -56,7 +58,9 @@ public Produto(int codProduto, String nome, double preco, boolean alcoolica, Str
     public int getCodProduto() {
         return codProduto;
     }
-
+    public String getCategoria() {
+        return categoria;
+    }
     public void setCodProduto(int codProduto) {
         this.codProduto = codProduto;
     }

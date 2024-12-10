@@ -25,8 +25,8 @@ public class IfoodJava {
         Restaurante restaurante = new Restaurante("Pizzaria da ingrid", "cidade nova 123","Pizza");
         dono.cadastrarRestaurante(restaurante);
 
-        Comida pizza = new Comida(0,"Pizza Margherita", 40.0, false, "Massa de fermentação natral, molho de tomate caseiro, queijo mussarela, tomate e manjericão", "Italiana", 30, true);
-        Bebida suco = new Bebida(1,"Suco de Laranja", 10.0, false, "Suco natural, feito na hora", 5, 500, false);
+        Comida pizza = new Comida(0,"Pizza Margherita", 40.0, false, "Massa de fermentação natral, molho de tomate caseiro, queijo mussarela, tomate e manjericão", "Italiana", 30, true, "Comida");
+        Bebida suco = new Bebida(1,"Suco de Laranja", 10.0, false, "Suco natural, feito na hora", 5, 500, false, "Bebida");
         restaurante.adicionarProduto(pizza);
         restaurante.adicionarProduto(suco);
 

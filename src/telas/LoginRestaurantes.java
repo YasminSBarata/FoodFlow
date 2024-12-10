@@ -4,6 +4,9 @@
  */
 package telas;
 
+import javax.swing.JOptionPane;
+import classes.Checagem;
+
 /**
  *
  * @author mateu
@@ -46,13 +49,12 @@ public class LoginRestaurantes extends javax.swing.JFrame {
         NomeNovo = new javax.swing.JLabel();
         NovoNome = new javax.swing.JTextField();
         EndereçoRestaurante = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         NovoEmail = new javax.swing.JTextField();
         EmailNovo = new javax.swing.JLabel();
         EmailNovo1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        Categoria = new javax.swing.JComboBox<>();
         CadstrarRestaurante = new javax.swing.JButton();
+        EnderecoRestaurante = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -137,6 +139,7 @@ public class LoginRestaurantes extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 51, 51));
         jPanel2.setMinimumSize(new java.awt.Dimension(400, 720));
+        jPanel2.setPreferredSize(new java.awt.Dimension(400, 720));
 
         jPanel3.setPreferredSize(new java.awt.Dimension(400, 200));
 
@@ -212,10 +215,6 @@ public class LoginRestaurantes extends javax.swing.JFrame {
         EndereçoRestaurante.setForeground(new java.awt.Color(255, 255, 255));
         EndereçoRestaurante.setText("Endereço");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
         NovoEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NovoEmailActionPerformed(evt);
@@ -228,10 +227,10 @@ public class LoginRestaurantes extends javax.swing.JFrame {
         EmailNovo1.setForeground(new java.awt.Color(255, 255, 255));
         EmailNovo1.setText("Categoria");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar", "Italiana", "Pizza", "Hamburger", "Sobremesa", "Japonesa", "Vegetariana", "Sopas e Caldos", "Lanche" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        Categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar", "Italiana", "Pizza", "Hamburger", "Sobremesa", "Japonesa", "Vegetariana", "Sopas e Caldos", "Lanche" }));
+        Categoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                CategoriaActionPerformed(evt);
             }
         });
 
@@ -241,6 +240,12 @@ public class LoginRestaurantes extends javax.swing.JFrame {
         CadstrarRestaurante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadstrarRestauranteActionPerformed(evt);
+            }
+        });
+
+        EnderecoRestaurante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnderecoRestauranteActionPerformed(evt);
             }
         });
 
@@ -271,8 +276,8 @@ public class LoginRestaurantes extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(NovoEmail)
                             .addComponent(NovoNome)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, 184, Short.MAX_VALUE)))
+                            .addComponent(Categoria, 0, 184, Short.MAX_VALUE)
+                            .addComponent(EnderecoRestaurante)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(152, 152, 152)
                         .addComponent(CadstrarRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -290,31 +295,31 @@ public class LoginRestaurantes extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NomeNovo)
                     .addComponent(NovoNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EndereçoRestaurante)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(EnderecoRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(96, 96, 96)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EmailNovo)
                     .addComponent(NovoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EmailNovo1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44)
                 .addComponent(CadstrarRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 94, Short.MAX_VALUE))
+                .addGap(0, 42, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,13 +347,32 @@ public class LoginRestaurantes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NovoEmailActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void CategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_CategoriaActionPerformed
 
     private void CadstrarRestauranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadstrarRestauranteActionPerformed
+        String nome = NovoNome.getText().trim();
+        String email = NovoEmail.getText();
+        String endereco = EnderecoRestaurante.getText();
+
+        
+        // Checar se os campos estão vazios
+        if (Checagem.Vazio(nome,email, endereco)) {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;}
+            else if (Categoria.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione uma categoria.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+            else{
         new Restaurante().setVisible(true);
+            }
     }//GEN-LAST:event_CadstrarRestauranteActionPerformed
+
+    private void EnderecoRestauranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnderecoRestauranteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EnderecoRestauranteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -387,10 +411,12 @@ public class LoginRestaurantes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CadstrarRestaurante;
+    private javax.swing.JComboBox<String> Categoria;
     private javax.swing.JLabel EmailNovo;
     private javax.swing.JLabel EmailNovo1;
     private javax.swing.JLabel EmailR;
     private javax.swing.JTextField EmailRestaurante;
+    private javax.swing.JTextField EnderecoRestaurante;
     private javax.swing.JLabel EndereçoRestaurante;
     private javax.swing.JLabel NomeD;
     private javax.swing.JTextField NomeDono;
@@ -398,7 +424,6 @@ public class LoginRestaurantes extends javax.swing.JFrame {
     private javax.swing.JTextField NovoEmail;
     private javax.swing.JTextField NovoNome;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JDialog jDialog3;
@@ -410,8 +435,6 @@ public class LoginRestaurantes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton loginRestaurante;
     // End of variables declaration//GEN-END:variables
 }
