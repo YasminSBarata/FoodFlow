@@ -55,6 +55,7 @@ public class LoginRestaurantes extends javax.swing.JFrame {
         Categoria = new javax.swing.JComboBox<>();
         CadstrarRestaurante = new javax.swing.JButton();
         EnderecoRestaurante = new javax.swing.JTextField();
+        btnNovoProduto4 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -137,10 +138,11 @@ public class LoginRestaurantes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
         jPanel2.setMinimumSize(new java.awt.Dimension(400, 720));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 720));
 
+        jPanel3.setForeground(new java.awt.Color(204, 0, 0));
         jPanel3.setPreferredSize(new java.awt.Dimension(400, 200));
 
         NomeD.setText("Nome");
@@ -198,11 +200,14 @@ public class LoginRestaurantes extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
+        jLabel1.setForeground(new java.awt.Color(102, 204, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Ainda não possui uma conta?");
 
+        jLabel2.setForeground(new java.awt.Color(153, 204, 255));
         jLabel2.setText("Faça seu cadastro agora!");
 
+        NomeNovo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         NomeNovo.setForeground(new java.awt.Color(255, 255, 255));
         NomeNovo.setText("Nome");
 
@@ -212,6 +217,7 @@ public class LoginRestaurantes extends javax.swing.JFrame {
             }
         });
 
+        EndereçoRestaurante.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         EndereçoRestaurante.setForeground(new java.awt.Color(255, 255, 255));
         EndereçoRestaurante.setText("Endereço");
 
@@ -221,9 +227,11 @@ public class LoginRestaurantes extends javax.swing.JFrame {
             }
         });
 
+        EmailNovo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         EmailNovo.setForeground(new java.awt.Color(255, 255, 255));
         EmailNovo.setText("Email");
 
+        EmailNovo1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         EmailNovo1.setForeground(new java.awt.Color(255, 255, 255));
         EmailNovo1.setText("Categoria");
 
@@ -249,19 +257,25 @@ public class LoginRestaurantes extends javax.swing.JFrame {
             }
         });
 
+        btnNovoProduto4.setBackground(new java.awt.Color(234, 29, 44));
+        btnNovoProduto4.setFont(new java.awt.Font("Sul Sans", 0, 18)); // NOI18N
+        btnNovoProduto4.setForeground(new java.awt.Color(255, 255, 255));
+        btnNovoProduto4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icone_voltar_branco.png"))); // NOI18N
+        btnNovoProduto4.setText("Voltar");
+        btnNovoProduto4.setBorder(null);
+        btnNovoProduto4.setBorderPainted(false);
+        btnNovoProduto4.setContentAreaFilled(false);
+        btnNovoProduto4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNovoProduto4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoProduto4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(111, 111, 111))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(133, 133, 133))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -279,9 +293,21 @@ public class LoginRestaurantes extends javax.swing.JFrame {
                             .addComponent(Categoria, 0, 184, Short.MAX_VALUE)
                             .addComponent(EnderecoRestaurante)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(152, 152, 152)
+                        .addGap(150, 150, 150)
                         .addComponent(CadstrarRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(111, 111, 111))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(133, 133, 133))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnNovoProduto4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,17 +325,19 @@ public class LoginRestaurantes extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EndereçoRestaurante)
                     .addComponent(EnderecoRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(96, 96, 96)
+                .addGap(64, 64, 64)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EmailNovo)
                     .addComponent(NovoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EmailNovo1)
                     .addComponent(Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
+                .addGap(34, 34, 34)
                 .addComponent(CadstrarRestaurante, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 42, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(btnNovoProduto4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -374,6 +402,10 @@ public class LoginRestaurantes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EnderecoRestauranteActionPerformed
 
+    private void btnNovoProduto4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoProduto4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNovoProduto4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -423,6 +455,7 @@ public class LoginRestaurantes extends javax.swing.JFrame {
     private javax.swing.JLabel NomeNovo;
     private javax.swing.JTextField NovoEmail;
     private javax.swing.JTextField NovoNome;
+    private javax.swing.JButton btnNovoProduto4;
     private javax.swing.JButton jButton1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
