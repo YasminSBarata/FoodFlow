@@ -1,22 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package classes;
 
 /**
  *
  * @author yasmi
  */
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
  // Classe Cliente, herdando de Usuario
 public class Cliente extends Usuario {
     private List<Produto> carrinho;
+       private int codCliente;
 
-    public Cliente(String nome, String email) {
+    
+    public Cliente(int codCliente, String nome, String email) {
         super(nome, email);
+        this.codCliente = codCliente;
         this.carrinho = new ArrayList<>();
     }
 
@@ -59,6 +60,39 @@ public class Cliente extends Usuario {
         carrinho.clear();
         System.out.println("Pedido finalizado com sucesso!");
     }
-}
 
+    public void init() throws IOException {
+        // decidi o id (único) do cliente e o salva no banco de dados
+        int curr_id = 0;
+        
+        try {
+            ArrayList<Cliente> clientes = Manipulador.carregarClientes();
+            
+            if (clientes.size() > 0)
+                curr_id = clientes.get(clientes.size()-1).getCodCliente()+1;
+        } catch(IOException ex) {
+            curr_id = 0;
+        }
+        
+        this.setCodCliente(curr_id);
+        Manipulador.armazenar(this);
+    }
+    
+    @Override
+    public String toString() {
+        
+        return String.valueOf(this.codCliente) + ";"
+                + this.nome + ";"
+                + this.email + ";";
+                }
+    
+    public int getCodCliente() {
+        return codCliente;
+    }
+
+    public void setCodCliente(int codCliente) {
+        this.codCliente = codCliente;
+    }
+
+}
 

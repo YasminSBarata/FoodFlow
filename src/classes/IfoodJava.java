@@ -11,6 +11,7 @@ package classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import telas.Inicial;
 
 public class IfoodJava {
     public static void main(String[] args) {
@@ -21,11 +22,11 @@ public class IfoodJava {
         // Carregar dados do arquivo
         dono.carregarRestaurantes(caminhoArquivo);
 
-        Restaurante restaurante = new Restaurante("Pizzaria da ingrid", "cidade nova, 123");
+        Restaurante restaurante = new Restaurante("Pizzaria da ingrid", "cidade nova 123","Pizza");
         dono.cadastrarRestaurante(restaurante);
 
-        Comida pizza = new Comida("Pizza Margherita", 40.0, 30, "Italiana", true);
-        Bebida suco = new Bebida("Suco de Laranja", 10.0, 5, 500, false);
+        Comida pizza = new Comida(0,"Pizza Margherita", 40.0, false, "Massa de fermentação natral, molho de tomate caseiro, queijo mussarela, tomate e manjericão", "Italiana", 30, true, "Comida");
+        Bebida suco = new Bebida(1,"Suco de Laranja", 10.0, false, "Suco natural, feito na hora", 5, 500, false, "Bebida");
         restaurante.adicionarProduto(pizza);
         restaurante.adicionarProduto(suco);
 
@@ -33,7 +34,7 @@ public class IfoodJava {
         dono.salvarRestaurantes(caminhoArquivo);
         
         // Cliente
-        Cliente cliente = new Cliente("nalice dias", "nalice@email.com");
+        Cliente cliente = new Cliente(0,"nalice dias", "nalice@email.com");
 
         // Cliente interagindo com o sistema
         cliente.visualizarRestaurantes(dono.getRestaurantes());
@@ -42,6 +43,6 @@ public class IfoodJava {
 
         // Finalizando o pedido
         cliente.finalizarPedido();
-
+new Inicial().setVisible(true);
         }
     }

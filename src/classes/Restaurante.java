@@ -14,11 +14,13 @@ import java.util.List;
 public class Restaurante {
     private String nome;
     private String endereco;
+    private String categoria;
     private List<Produto> produtos;
 
-    public Restaurante(String nome, String endereco) {
+    public Restaurante(String nome, String endereco, String categoria) {
         this.nome = nome;
         this.endereco = endereco;
+        this.categoria = categoria;
         this.produtos = new ArrayList<>();
     }
 
@@ -29,6 +31,11 @@ public class Restaurante {
     public String getEndereco() {
         return endereco;
     }
+    
+    public String getCategoria(){
+        return categoria;
+    }
+    
 
     public void adicionarProduto(Produto produto) {
         produtos.add(produto);
@@ -38,4 +45,6 @@ public class Restaurante {
     public List<Produto> getProdutos() {
         return produtos;
     }
+    
+    
 }
