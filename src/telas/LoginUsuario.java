@@ -32,6 +32,7 @@ public class LoginUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnNovoProduto2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         EmailUsuario = new java.awt.Label();
@@ -39,24 +40,44 @@ public class LoginUsuario extends javax.swing.JFrame {
         UsuarioC = new java.awt.Label();
         LoginCliente = new javax.swing.JButton();
         emailUsuario = new javax.swing.JTextField();
+        btnNovoProduto3 = new javax.swing.JButton();
+        btnNovoProduto4 = new javax.swing.JButton();
+
+        btnNovoProduto2.setBackground(new java.awt.Color(234, 29, 44));
+        btnNovoProduto2.setFont(new java.awt.Font("Sul Sans", 0, 18)); // NOI18N
+        btnNovoProduto2.setForeground(new java.awt.Color(255, 255, 255));
+        btnNovoProduto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icone_voltar_branco.png"))); // NOI18N
+        btnNovoProduto2.setText("Voltar");
+        btnNovoProduto2.setBorder(null);
+        btnNovoProduto2.setBorderPainted(false);
+        btnNovoProduto2.setContentAreaFilled(false);
+        btnNovoProduto2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNovoProduto2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoProduto2ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(204, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 720));
 
-        EmailUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        EmailUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
+
+        EmailUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        EmailUsuario.setForeground(new java.awt.Color(255, 255, 255));
         EmailUsuario.setText("Email");
 
-        UsuarioCliente.setBackground(new java.awt.Color(204, 204, 204));
+        UsuarioCliente.setBackground(new java.awt.Color(255, 255, 255));
         UsuarioCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsuarioClienteActionPerformed(evt);
             }
         });
 
-        UsuarioC.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        UsuarioC.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        UsuarioC.setForeground(new java.awt.Color(255, 255, 255));
         UsuarioC.setText("Usuario");
 
         LoginCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -68,7 +89,6 @@ public class LoginUsuario extends javax.swing.JFrame {
             }
         });
 
-        emailUsuario.setBackground(new java.awt.Color(204, 204, 204));
         emailUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailUsuarioActionPerformed(evt);
@@ -89,7 +109,7 @@ public class LoginUsuario extends javax.swing.JFrame {
                     .addComponent(LoginCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(UsuarioCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                     .addComponent(emailUsuario))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,17 +128,67 @@ public class LoginUsuario extends javax.swing.JFrame {
                 .addGap(45, 45, 45))
         );
 
+        btnNovoProduto3.setBackground(new java.awt.Color(234, 29, 44));
+        btnNovoProduto3.setFont(new java.awt.Font("Sul Sans", 0, 18)); // NOI18N
+        btnNovoProduto3.setForeground(new java.awt.Color(255, 255, 255));
+        btnNovoProduto3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icone_voltar_branco.png"))); // NOI18N
+        btnNovoProduto3.setText("Voltar");
+        btnNovoProduto3.setBorder(null);
+        btnNovoProduto3.setBorderPainted(false);
+        btnNovoProduto3.setContentAreaFilled(false);
+        btnNovoProduto3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNovoProduto3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoProduto3ActionPerformed(evt);
+            }
+        });
+
+        btnNovoProduto4.setBackground(new java.awt.Color(234, 29, 44));
+        btnNovoProduto4.setFont(new java.awt.Font("Sul Sans", 0, 18)); // NOI18N
+        btnNovoProduto4.setForeground(new java.awt.Color(255, 255, 255));
+        btnNovoProduto4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icone_voltar_branco.png"))); // NOI18N
+        btnNovoProduto4.setText("Voltar");
+        btnNovoProduto4.setBorder(null);
+        btnNovoProduto4.setBorderPainted(false);
+        btnNovoProduto4.setContentAreaFilled(false);
+        btnNovoProduto4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNovoProduto4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoProduto4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(btnNovoProduto4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(75, 75, 75)
+                    .addComponent(btnNovoProduto3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(75, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 460, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(296, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNovoProduto4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(341, 341, 341)
+                    .addComponent(btnNovoProduto3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(341, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -168,6 +238,20 @@ public class LoginUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_emailUsuarioActionPerformed
 
+    private void btnNovoProduto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoProduto2ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_btnNovoProduto2ActionPerformed
+
+    private void btnNovoProduto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoProduto3ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_btnNovoProduto3ActionPerformed
+
+    private void btnNovoProduto4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoProduto4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNovoProduto4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -208,6 +292,9 @@ public class LoginUsuario extends javax.swing.JFrame {
     private javax.swing.JButton LoginCliente;
     private java.awt.Label UsuarioC;
     private java.awt.TextField UsuarioCliente;
+    private javax.swing.JButton btnNovoProduto2;
+    private javax.swing.JButton btnNovoProduto3;
+    private javax.swing.JButton btnNovoProduto4;
     private javax.swing.JTextField emailUsuario;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

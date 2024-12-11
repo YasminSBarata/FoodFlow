@@ -46,9 +46,8 @@ public class FazerPedido extends javax.swing.JFrame {
         btnNovoProduto4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(400, 720));
 
-        jPanel1.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(204, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 720));
 
         jlCadastros.setFont(new java.awt.Font("Sul Sans", 0, 24)); // NOI18N
@@ -69,7 +68,7 @@ public class FazerPedido extends javax.swing.JFrame {
         jlNomeProduto.setForeground(new java.awt.Color(255, 255, 255));
         jlNomeProduto.setText("Endereço:");
 
-        Endereco.setBackground(new java.awt.Color(234, 29, 44));
+        Endereco.setBackground(new java.awt.Color(204, 0, 0));
         Endereco.setFont(new java.awt.Font("Sul Sans", 0, 14)); // NOI18N
         Endereco.setForeground(new java.awt.Color(255, 255, 255));
         Endereco.setRows(5);

@@ -9,5 +9,6 @@ Restaurante:Pizzaria da ingrid;cidade nova 123;Pizza
 Restaurante:Pizzaria da ingrid;cidade nova 123;Pizza
 Restaurante:Pizzaria da ingrid;cidade nova 123;Pizza
 Restaurante:Pizzaria da ingrid;cidade nova 123;Pizza
+Restaurante:Pizzaria da ingrid;cidade nova 123;Pizza
 Comida:0;Pizza Margherita;40.0;30;Italiana;true
 Bebida:1;Suco de Laranja;10.0;500;500;false
